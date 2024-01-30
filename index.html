@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phalana Dhekana Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://images.app.goo.gl/X9R9Cd9sP4bpi1eCA') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #loginPopup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #loginButton {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #welcomePage {
+      display: none;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="loginPopup">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <button id="loginButton">Login</button>
+  </div>
+
+  <div id="welcomePage">
+    <h1>Welcome to Phalana Dhekana Website</h1>
+  </div>
+
+  <script>
+    document.getElementById('loginButton').addEventListener('click', function() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simple validation for demo purposes
+      if (username === 'yourUsername' && password === 'yourPassword') {
+        document.getElementById('loginPopup').style.display = 'none';
+        document.getElementById('welcomePage').style.display = 'block';
+      } else {
+        alert('Incorrect username or password. Please try again.');
+      }
+    });
+  </script>
+</body>
+    </html>
+    
